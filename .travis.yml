@@ -11,6 +11,7 @@ before_deploy:
   - go get github.com/mitchellh/gox
   - cd cmd/grafana-reporter
   - gox -output "_output/{{.OS}}/{{.Arch}}/{{.Dir}}" -os="linux"
+  - tree 
 
 deploy:
   provider: releases
